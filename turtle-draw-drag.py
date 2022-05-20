@@ -1,30 +1,27 @@
 from turtle import *
-import turtle
 from turtle import Screen, Turtle
 
-ws = Screen()
-tur = turtle.Turtle()
+tur = Turtle()
 tur.speed(0)
-turtle.tracer(0,0)
+tracer(0,0)
 
 def dragging(x, y): 
     tur.ondrag(None)
     tur.setheading(tur.towards(x, y))
     tur.goto(x, y)
     tur.ondrag(dragging)
-    turtle.update()
+    update()
 
 def clear():
     tur.clear()
-    turtle.update()
+    update()
 
 def main():  
-    turtle.listen()
-    
+    listen()
     tur.ondrag(dragging)  
-    turtle.onscreenclick(clear, 2)
-    turtle.onkey(clear,'c')
-    turtle.update()
-    ws.mainloop()  
+    onscreenclick(clear, 2)
+    onkey(clear,'c')
+    update()
+    mainloop()  
 
 main()
