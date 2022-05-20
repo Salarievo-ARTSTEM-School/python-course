@@ -17,6 +17,7 @@ t1 = Turtle('turtle')
 t1.speed(0)
 
 t2=Turtle()
+t2.color('red')
 t2.speed(0)
 t2.fd(100)
 def main():
